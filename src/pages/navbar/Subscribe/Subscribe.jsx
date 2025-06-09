@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom';
 import { doc, updateDoc, serverTimestamp, Timestamp } from "firebase/firestore";
 import { auth, db } from "../../../Auth/firebase";
 
+const BASE_URL = "https://cinefix-backend.onrender.com";
+
 const Subscribe = () => {
   const navigate = useNavigate();
 
@@ -19,7 +21,12 @@ const Subscribe = () => {
 
   const handlePayment = async (amount) => {
     try {
-      const res = await fetch("http://localhost:5000/create-order", {
+      // const res = await fetch("http://localhost:5000/create-order", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({ amount }),
+      // });
+      const res = await fetch(`${BASE_URL}/create-order`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount }),
