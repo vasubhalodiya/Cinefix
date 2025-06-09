@@ -1,0 +1,358 @@
+/* .sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: var(--secondary-color);
+  padding-top: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+} */
+
+.sidebar-logo {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 100px;
+}
+
+.sidebar-list-group {
+  margin-bottom: 20px;
+}
+
+.sidebar-list {
+  margin-top: 20px;
+}
+
+.sidebar-title h6 {
+  color: var(--text-light-color);
+  font-size: 12px;
+  font-family: 'Int-Medium';
+  margin-bottom: 10px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sidebar-link-list {
+  padding: 0 20px;
+}
+
+.sidebar-link {
+  height: 45px;
+  color: var(--text-color);
+  font-size: 15px;
+  font-family: 'Int-Medium';
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 15px;
+  padding: 0 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-bottom: 5px;
+}
+
+.sidebar-link i {
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-link:hover {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.sidebar-link:hover i {
+  color: #ec9c9c;
+  font-weight: 800;
+}
+
+.sidebar-link.active {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.sidebar-link.active i,
+.sidebar-link.active .active-icon {
+  color: var(--red-color);
+  font-weight: 800;
+}
+
+.sidebar-links .fa-tv {
+  font-size: 13px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #111;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 99999999999999;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.navbar-mobile-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: 5px;
+}
+
+.navbar-toggle-btn i {
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggle-btn i.fa-xmark {
+  transform: rotate(90deg);
+}
+
+.navbar-cnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-cnt.shifted {
+  transform: translateX(200px);
+}
+
+.navbar-cnt {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.navbar-cnt.shifted {
+  transform: translateX(250px);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99999999;
+  cursor: pointer;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  overflow-y: scroll;
+}
+
+.sidebar.open .sidebar-logo .logo,
+.navbar-mobile-logo {
+  width: 90px;
+}
+
+.sidebar.open .sidebar-logo {
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-close-btn i {
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.gradient-overlay.left-gradient {
+  left: -1px;
+}
+
+.gradient-overlay.right-gradient {
+  right: -1px;
+}
+
+.sidebar-links.subscribe-link .sidebar-link {
+  color: var(--light-color);
+  background-color: var(--red-color);
+  font-family: 'Int-Regular';
+}
+
+.sidebar.open .navbar-profile-section .sidebar-subscribe-btn {
+  display: none;
+}
+.sidebar.open .sidebar-links {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+/* .moviecard {
+    margin-bottom: 20px;
+} */
+
+.moviecard-img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.moviecard-title {
+    margin-bottom: 7px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.moviecard-rating {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    letter-spacing: 2px;
+}
+
+.moviecard-genres {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 7px;
+}
+
+.movies-list {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 10px;
+}
+
+.premium-badge
+{
+    position: absolute;
+    top: 0;
+}
+
+.premium-badge i
+{
+    width: 35px;
+    height: 35px;
+    color: var(--yellow-color);
+    background-color: var(--red-color);
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 9999999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

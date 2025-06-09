@@ -1,0 +1,194 @@
+==================== Discovery ====================
+- coming soon - TMDB api through data fetch
+- movie studios - static data slider
+- popular movies - TMDB api through data fetch
+
+==================== Search ====================
+- when user search then fech data from TMDB api and show 
+
+==================== Top Rated ====================
+- all "DISNEY" top rated movie fetch through TMDB api
+
+==================== Premium ====================
+- when user not subscribe then not access premium page
+|---> when user click premium page then show subscribe page
+|---> when user clear payment then automatically redirect premium page
+
+- when user subscribe then access premium page
+
+==================== My Backpack ====================
+- when user add any movie in backpack then show this movie in this page and user have one "Remove" movie option to remove added movie
+
+==================== Movies ====================
+- all "MARVEL" movies fetch through TMDB api till 01-01-2013, 31-12-2025 date
+
+==================== Series ====================
+- all "MARVEL" series fetch through TMDB api
+
+==================== Tv Shows ====================
+- all "INDIAN" tv shows fetch through TMDB api
+
+==================== Subscribe ====================
+- when user without pay to access premium page then automatic redirect this subscribe page and this application have 3 subscription plans
+|---> Free Plan - ₹0/month
+|---> Monthly Plan - ₹189/month
+|---> Yearly Plan - ₹2189/year
+
+==================== Profile ====================
+- in the profile page, display the email of the user who is currently logged in.
+- when user not login then not open profile page and first sow login page
+- when user successfully login then show profile page in user email address
+- when user haven't acoount then user have option to create a account then login to recent created account
+
+
+===================================================
+File for Perticular Features
+===================================================
+
+------ Movies Fetch ------
+movieApi.jsx
+store.jsx
+Movies.jsx
+
+------ Payment Integration ------
+server.js
+Subscribe.jsx
+PremiumPage.jsx
+checkSubscription.jsx
+ProtectedRoute.jsx
+AppRoutes.jsx
+
+------ Authentication ------
+AuthContext.jsx
+firebase.js
+Login.jsx
+PrivateRoute.jsx
+Signup.jsx
+AppRoutes.jsx
+
+
+
+note: when subscription page not working then first check server is started or not and server is close then run this command
+-> node server/server.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

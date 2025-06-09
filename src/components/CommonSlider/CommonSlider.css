@@ -1,0 +1,133 @@
+.slider-container {
+    width: 100%;
+    /* max-width: 1200px; */
+}
+
+.slider-wrapper {
+    position: relative;
+    margin-top: 10px;
+}
+
+.slider-head
+{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.slider-btn
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 70px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.left-gradient {
+    left: 0;
+    background: linear-gradient(to right, rgba(25, 25, 25, 1.8), transparent);
+}
+
+.right-gradient {
+    right: 0;
+    background: linear-gradient(to left, rgba(25, 25, 25, 1.8), transparent);
+}
+
+.arrow-button {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.arrow-button:disabled {
+    color: var(--text-color);
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+}
+
+.arrow-icon {
+    font-size: 1.5rem;
+}
+
+.slider-content {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 20px;
+}
+
+.slider-content::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

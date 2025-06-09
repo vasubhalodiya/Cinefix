@@ -1,0 +1,228 @@
+.auth-heading {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+.auth-heading .logo {
+    width: 100px;
+}
+
+.auth-form {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-title {
+    color: var(--ligh-color);
+    font-size: 25px;
+    font-family: 'Int-SemiBold';
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.auth-input-field {
+    /* width: 25%; */
+    width: 400px;
+}
+
+.auth-input-title {
+    color: var(--text-color);
+    font-size: 14px;
+    font-family: 'Int-Regular';
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.auth-input {
+    width: 100%;
+    height: 45px;
+    color: var(--ligh-color);
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+}
+
+.auth-btn {
+    /* width: 25%; */
+    width: 400px;
+    height: 45px;
+    color: var(--ligh-color);
+    background-color: var(--red-color);
+    font-size: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.auth-already-account {
+    color: var(--text-light-color);
+    font-size: 14px;
+    font-family: 'Int-Regular';
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+}
+
+.auth-already-account a {
+    color: #008cff;
+    font-family: 'Int-Medium';
+    text-decoration: underline;
+}
+
+/* .auth-loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+} */
+
+
+.auth-loading {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at center, #0d0d0d 0%, #0d0d0d 40%, #2a2a2b 100%);
+  background-size: 400% 400%;
+  animation: bluePulse 6s ease-in-out infinite;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.auth-loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-image: 
+    linear-gradient(transparent 95%, rgba(255,255,255,0.02) 96%),
+    linear-gradient(90deg, transparent 95%, rgba(255,255,255,0.02) 96%);
+  background-size: 40px 40px;
+  animation: gridMove 10s linear infinite;
+  z-index: 0;
+}
+
+@keyframes bluePulse {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-40px, -40px);
+  }
+}
+
+.auth-loading > * {
+  position: relative;
+  z-index: 1;
+}
+
+.film-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.reel {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ff3c3c;
+    animation: pulse 0.6s infinite alternate;
+}
+
+.left-reel {
+    animation-delay: 0s;
+}
+
+.right-reel {
+    animation-delay: 0.3s;
+}
+
+.strip {
+    width: 80px;
+    height: 6px;
+    background: linear-gradient(to right, #ffffff 20%, transparent 20%, transparent 40%, #ffffff 40%, #ffffff 60%, transparent 60%, transparent 80%, #ffffff 80%);
+    background-size: 20px 6px;
+    animation: move-strip 1s linear infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.4);
+    }
+}
+
+@keyframes move-strip {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 20px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

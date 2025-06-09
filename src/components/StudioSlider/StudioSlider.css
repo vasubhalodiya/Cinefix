@@ -1,0 +1,92 @@
+.studios-card {
+    width: 180px;
+    height: 110px;
+    padding: 15px;
+    border-radius: 15px;
+    border: var(--border-color) 1px solid;
+    flex-shrink: 0;
+    /* cursor: pointer; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.studios-img
+{
+    width: 110px;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 70px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.left-gradient {
+    left: 0;
+    background: linear-gradient(to right, rgba(25, 25, 25, 1.8), transparent);
+}
+
+.right-gradient {
+    right: 0;
+    background: linear-gradient(to left, rgba(25, 25, 25, 1.8), transparent);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

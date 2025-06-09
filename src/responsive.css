@@ -1,0 +1,199 @@
+@media screen and (min-width:1500px){
+    .sidebar{transform: translateX(0%);}
+    .trailer iframe{height: 550px;}
+}
+
+@media screen and (min-width:1241px) and (max-width:1500px)
+{
+    .left-gradient{left: -1px;}
+    .right-gradient{right: -1px;}
+    .sidebar{transform: translateX(0%);}
+    .trailer iframe{width: 100%; height: 400px; background: none;}
+
+}
+
+@media screen and (min-width:1025px) and (max-width:1240px)
+{
+    .sidebar.open{transform: translateX(0);}
+    .navbar-link-list{display: none;}
+    .app-layout{margin-left: 0;}
+    .navbar{left: 0;}
+    .navbar .navbar-subscribe-btn{display: none;}
+    .movie-sidebar{width: 25%;}
+    .trailer iframe{height: 420px;}
+    .backpack-movies-section{grid-template-columns: repeat(4, 1fr);}
+    
+
+}
+
+@media screen and (min-width:992px) and (max-width:1024px)
+{
+	.sidebar.open{transform: translateX(0);}
+    .navbar-link-list{display: none;}
+    .app-layout{margin-left: 0;}
+    .navbar{left: 0;}
+    .navbar .navbar-subscribe-btn{display: none;}
+    .movie-name{font-size: 23px;margin-bottom: 5px;}
+    .movie-type {width: 100px;height: 30px;font-size: 12px;margin-bottom: 5px;}
+    .movie-episode{font-size: 13px; margin-bottom: 5px;}
+    .coming-soon-poster-txt-btns .btn-outline{padding: 10px;padding-left: 0px;gap: 10px;}
+    .popular-movies-card{width: 30%;}
+    .moviecard, .recommendation-cards-list .moviecard{margin-bottom: 0;}
+    .master-container{max-width: 100%;}
+    .movie-sidebar{width: 100%; position: unset; padding: 0; margin-top: 30px;}
+    .recommendation-cards-list .moviecard-title{max-width: 100%; -webkit-line-clamp: 2;}
+    .recommendation-cards-list .moviecard-txt{gap: 30px;}
+    .recommendation-cards-list.movie-sidebar-cnt-cards-list{display: flex; align-items: start; gap: 15px;}
+    .movie-thumbnail {width: 100%;height: 100%;object-fit: contain;display: block;}
+    .movie-play-btn-detail, .play-btn{height: 100%;}
+    .trailer iframe{height: 550px;}
+    .backpack-movies-section{grid-template-columns: repeat(4, 1fr);}
+    
+
+
+
+}
+
+@media screen and (min-width:768px) and (max-width:991px)
+{
+	.sidebar.open{transform: translateX(0);}
+    .navbar-link-list{display: none;}
+    .app-layout{margin-left: 0;}
+    .navbar{left: 0;}
+    .navbar .navbar-subscribe-btn{display: none;}
+    .movie-name{font-size: 23px;margin-bottom: 5px;}
+    .movie-type {width: 100px;height: 30px;font-size: 12px;margin-bottom: 5px;}
+    .movie-episode{font-size: 13px; margin-bottom: 5px;}
+    .coming-soon-poster-txt-btns .btn-outline{padding: 10px;padding-left: 0px;gap: 10px;}
+    .coming-soon-poster-txt{top: 35%;}
+    .studios-img{width: 100px;}
+    .popular-movies-card{width: 30%;}
+    .movies-list{grid-template-columns: repeat(3, 1fr);}
+    .top-rated-movie-list{grid-template-columns: repeat(2, 1fr);}
+    .moviecard, .recommendation-cards-list .moviecard{margin-bottom: 0;}
+    .master-container{max-width: 100%;}
+    .movie-sidebar{width: 100%; position: unset; padding: 0; margin-top: 30px;}
+    .recommendation-cards-list .moviecard-title{max-width: 100%; -webkit-line-clamp: 2;}
+    .recommendation-cards-list .moviecard-txt{gap: 30px;}
+    .recommendation-cards-list.movie-sidebar-cnt-cards-list{display: flex; align-items: start; gap: 15px;}
+    .movie-details-title{font-size: 21px;}
+    .movie-thumbnail {width: 100%;height: 100%;object-fit: contain;display: block;}
+    .movie-play-btn-detail, .play-btn{height: 100%;}
+    .play-btn .btn-play{width: 55px; height: 55px; font-size: 17px;}
+    .trailer iframe{height: 400px;}
+    .backpack-movies-section{grid-template-columns: repeat(4, 1fr);}
+    
+
+    
+}
+
+@media (max-width: 767px)
+{
+	.sidebar.open{transform: translateX(0);}
+    .navbar-link-list{display: none;}
+    .app-layout{margin-left: 0;}
+    .navbar{left: 0;}
+    .navbar .navbar-subscribe-btn{display: none;}
+    .section-heading{font-size: 20px;}
+    .movie-name{font-size: 19px;margin-bottom: 0;}
+    .movie-type {width: 100px;height: 30px;font-size: 12px;margin-bottom: 5px;}
+    .movie-episode{font-size: 13px; margin-bottom: 0px;}
+    .coming-soon-poster-txt-btns .btn-outline{padding: 10px;padding-left: 0px;gap: 10px;}
+    .coming-soon-poster-txt{top: 35%;}
+    .movie-type{width: 78px; height: 20px; background: none; border-bottom: 1px solid var(--red-color); border-radius: 0;}
+    .coming-soon-movie-poster{width: 65%;}
+    .studios-card{width: 150px;height: 90px;}
+    .studios-img{width: 85px;}
+    .popular-movies-card{width: 40%;}
+    .movies-list{grid-template-columns: repeat(2, 1fr);}
+    .top-rated-movie-list{grid-template-columns: repeat(2, 1fr);}
+	.top-rated-movie-title{width: 120px;}
+    .moviecard, .recommendation-cards-list .moviecard{margin-bottom: 0;}
+    .master-container{max-width: 100%;}
+    .movie-sidebar{width: 100%; position: unset; padding: 0; margin-top: 30px;}
+    .recommendation-cards-list .moviecard-title{max-width: 100%; -webkit-line-clamp: 2;}
+    .recommendation-cards-list .moviecard-txt{gap: 30px;}
+    .recommendation-cards-list.movie-sidebar-cnt-cards-list{display: flex; align-items: start; flex-wrap: wrap; gap: 15px;}
+    .movie-details-title{font-size: 20px;}
+    .movie-thumbnail {width: 100%;height: 100%;object-fit: contain;display: block;}
+    .movie-play-btn-detail, .play-btn{height: 100%;}
+    .play-btn .btn-play{width: 55px; height: 55px; font-size: 17px;}
+    .profile-content{flex-direction: column;}
+    .profile-sidebar{width: 100%; height: 100%; border-right: none; padding-right: 0;}
+    .profile-link-list:nth-child(2){border-bottom: 0; padding-bottom: 0;margin-bottom: 0;}
+    .profile-list{display: flex;align-items: start; justify-content: space-between;}
+    .profile-mini-title{display: none;}
+    .logout-button{height: 40px;background: none;border: none;margin-top: 0;}
+    .sidebar-link{width: 100%;}
+    .profile-sidebar-head-txt.section-heading{margin-bottom: 15px;}
+    .profile-edit-profile-section{width: 100%; align-items: center;margin-top: 100px;}
+    .profile-welcome-title{margin-bottom: 20px;}
+    .trailer iframe{height: 340px;}
+    .backpack-movies-section{grid-template-columns: repeat(3, 1fr);}
+    .master-btn:hover{transform: scale(1.05);}
+    .navbar-premium-badge{width: 35px;}
+    .navbar-premium-badge::before{width: 230%;}
+    .navbar-premium-badge span{display: none;}
+    .skeleton-img{height: 300px;}
+    .skeleton-card:nth-child(2){display: none;}
+    .skeleton-card{width: 100%;}
+
+}
+
+@media screen and (max-width:575px)
+{
+    .main-cnt{padding: 20px 23px;}
+    .navbar-cnt{padding: 0px 23px;}
+    .coming-soon-movie-poster{width: 100%;}
+	.section-heading{font-size: 21px;}
+    .arrow-button{width: 32px;height: 32px;}
+    .popular-movies-card{width: 50%;}
+    .moviecard-title{font-size: 16px;}
+    .top-rated-movie-list{grid-template-columns: repeat(1, 1fr);}
+    /* .auth-input-field, .auth-btn{width:80%;} */
+    .recommendation-cards-list.movie-sidebar-cnt-cards-list{display: flex; align-items: start; flex-wrap: wrap; gap: 15px;}
+    .add-to-backpack-btn{width: auto; height: auto; padding: 10px;}
+    .add-to-backpack-btn i{font-size: 18px;}
+    .add-to-backpack-btn span{display: none;}
+    .movie-details-title-with-btn{gap: 30px;}
+    .play-btn .btn-play{width: 50px; height: 50px; font-size: 17px;}
+    .trailer iframe{height: 340px;}
+    .backpack-movies-section{grid-template-columns: repeat(2, 1fr);}
+    .skeleton-img{height: 250px;}
+    .coming-soon-premium-badge i{width: 35px;height: 35px;font-size: 16px;}
+
+}
+
+@media screen and (max-width:480px)
+{
+    .main-cnt{padding: 20px 15px;}
+    .navbar-cnt{padding: 0px 15px;}
+    .navbar-profile-section, .navbar-mobile-header{gap: 20px;}
+    .profile-dropdown i{display: none;}
+    .popular-movies-card{width: 75%;}
+    .movies-list{grid-template-columns: repeat(1, 1fr);}
+    .auth-input-field, .auth-btn{width:300px;}
+    .trailer iframe{height: 260px;}
+    .backpack-movies-section{grid-template-columns: repeat(2, 1fr);}
+    .skeleton-img{height: 200px;}
+    .backpack-overlay-message{width: 300px;}
+	
+}
+
+@media screen and (max-width:375px)
+{
+    .sidebar{width: 100%;}
+    .search-bar .btn-filled{width: 110px; height: 35px; font-size: 13px;}
+    .search-input{height: 40px;}
+    .top-rated-card-rank {width: 30px;height: 40px;font-size: 20px;}
+    .subscribe-container{padding: 0;}
+    .subscribe-card{width: 100%;}
+    .play-btn .btn-play{width: 45px; height: 45px; font-size: 15px;}
+    .trailer iframe{height: 200px;}
+    .backpack-movies-section{grid-template-columns: repeat(1, 1fr);}
+
+
+}
+
+
+

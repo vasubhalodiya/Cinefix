@@ -1,0 +1,89 @@
+.popular-movies-card {
+    width: 25%;
+    height: 100%;
+    padding: 0px;
+    border-radius: 15px;
+    flex-shrink: 0;
+    cursor: pointer;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.popular-movies-img
+{
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.moviecard-title {
+    margin-bottom: 7px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.moviecard-genres {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
