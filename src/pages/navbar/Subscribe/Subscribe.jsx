@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './Subscribe.css';
 import { Link } from 'react-router-dom';
-import images from '../../../utils/images';
+import images from '../../../utils/Images';
 import SubscribeCard from '@/components/SubscribeCard/SubscribeCard';
 import { useNavigate } from 'react-router-dom';
 import { doc, updateDoc, serverTimestamp, Timestamp } from "firebase/firestore";
