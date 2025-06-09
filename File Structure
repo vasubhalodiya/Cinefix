@@ -1,0 +1,66 @@
+src/
+│
+├── assets/                 # Images, videos, logos, etc.
+│   └── images/
+│   └── icons/
+│
+├── components/             # Reusable UI components
+│   └── Navbar/
+│   └── Sidebar/
+│   └── MovieCard/
+│   └── Carousel/
+│   └── GenreFilter/
+│   └── SearchBar/
+│
+├── layout/                 # Layout components like main dashboard layout
+│   └── DashboardLayout.jsx
+│
+├── pages/                  # Route-based pages
+│   └── Home.jsx
+│   └── MovieDetails.jsx
+│   └── Watch.jsx
+│   └── Search.jsx
+│   └── NotFound.jsx
+│
+├── routes/                 # All route configs
+│   └── AppRoutes.jsx
+│
+├── services/               # API calls and helpers
+│   └── movieService.js
+│   └── apiClient.js
+│
+├── context/                # React Context (auth, theme, player state, etc.)
+│   └── AuthContext.jsx
+│   └── PlayerContext.jsx
+│
+├── hooks/                  # Custom React hooks
+│   └── useAuth.js
+│   └── useMovies.js
+│
+├── utils/                  # Utility functions
+│   └── formatDate.js
+│   └── truncateText.js
+│
+├── styles/                 # Global styles, tailwind, or CSS modules
+│   └── globals.css
+│   └── theme.js (if using styled-components or Tailwind config)
+│
+├── App.jsx                 # Root component
+├── main.jsx                # React DOM render
+└── index.css               # Global base styles
+
+; *******************************************************
+
+import { toast } from 'react-toastify';
+
+toast.success("Login successful!");   // Green
+toast.error("Something went wrong!"); // Red
+toast.info("New update available.");  // Blue
+toast.warning("Password is weak!");   // Orange
+toast("This is a neutral message.");  // Default color
+
+toast.success("Custom toast", {
+  style: { backgroundColor: "#4caf50", color: "white" }
+});
+
+
