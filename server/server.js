@@ -36,7 +36,6 @@
 
 // server/server.js
 
-// ✅ Always keep dotenv at the top
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -47,17 +46,14 @@ import cors from 'cors';
 const app = express();
 const port = process.env.PORT || 5000;
 
-// ✅ Middleware setup
 app.use(cors());
 app.use(express.json());
 
-// ✅ Razorpay instance using env variables
 const razorpay = new Razorpay({
   key_id: process.env.RAZORPAY_KEY_ID,
   key_secret: process.env.RAZORPAY_KEY_SECRET,
 });
 
-// ✅ Payment order endpoint
 app.post('/create-order', async (req, res) => {
   try {
     const { amount } = req.body;
@@ -74,12 +70,10 @@ app.post('/create-order', async (req, res) => {
   }
 });
 
-// ✅ Test route
 app.get('/', (req, res) => {
-  res.send('Cinefix Express server is running!');
+  res.send('Hello from Cinefix server');
 });
 
-// ✅ Server start
 app.listen(port, () => {
   console.log(`🚀 Server running at http://localhost:${port}`);
 });
