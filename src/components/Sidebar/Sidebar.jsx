@@ -79,56 +79,57 @@ const Sidebar = () => {
           </div>
 
           <div className="sidebar-list">
-            <div className="sidebar-list-group">
-              <div className="sidebar-title"><h6>Menu</h6></div>
-              <div className="sidebar-link-list">
-                <ul className="sidebar-links">
-                  <NavLink to="/" iconClass="fa-regular fa-compass" label="Discovery" isSidebar={true} onClick={closeSidebar} />
-                  <NavLink to="/search" iconClass="fa-regular fa-magnifying-glass" label="Search" isSidebar={true} onClick={closeSidebar} />
-                  <NavLink to="/toprated" iconClass="fa-regular fa-star" label="Top Rated" isSidebar={true} onClick={closeSidebar} />
-                  <NavLink to="/premium" iconClass="fa-regular fa-crown" label="Premium" isSidebar={true} onClick={closeSidebar} />
-                </ul>
-              </div>
-            </div>
-
-            {isTablet && isOpen && (
-              <div className="sidebar-top-menu">
-                <div className="sidebar-list-group">
-                  <div className="sidebar-title"><h6>Streaming</h6></div>
-                  <div className="sidebar-link-list">
-                    <ul className="sidebar-links">
-                      <NavLink to="/movies" iconClass="fa-regular fa-clapperboard-play" label="Movies" isSidebar={true} onClick={closeSidebar} />
-                      <NavLink to="/series" iconClass="fa-regular fa-popcorn" label="Series" isSidebar={true} onClick={closeSidebar} />
-                      <NavLink to="/tvshows" iconClass="fa-regular fa-tv" label="Tv Shows" isSidebar={true} onClick={closeSidebar} />
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            <div className="sidebar-list-group">
-              <div className="sidebar-title"><h6>Library</h6></div>
-              <div className="sidebar-link-list">
-                <ul className="sidebar-links">
-                  <NavLink to="/mybackpack" iconClass="fa-light fa-backpack" label="My Backpack" isSidebar={true} onClick={closeSidebar} />
-                </ul>
-              </div>
-            </div>
-
-            {isTablet && isOpen && (
-              <div className={`sidebar-list-group sidebar-subscribe ${isSubscribed ? 'd-none' : ''}`}>
-                <div className="sidebar-title"><h6>Subscribe</h6></div>
+            <div>
+              <div className="sidebar-list-group">
+                <div className="sidebar-title"><h6>Menu</h6></div>
                 <div className="sidebar-link-list">
-                  <ul className="sidebar-links subscribe-link">
-                    <NavLink to="/subscribe" iconClass="fa-regular fa-badge-dollar" label="Subscribe" isSidebar={true} onClick={closeSidebar} />
+                  <ul className="sidebar-links">
+                    <NavLink to="/" iconClass="fa-regular fa-compass" label="Discovery" isSidebar={true} onClick={closeSidebar} />
+                    <NavLink to="/search" iconClass="fa-regular fa-magnifying-glass" label="Search" isSidebar={true} onClick={closeSidebar} />
+                    <NavLink to="/toprated" iconClass="fa-regular fa-star" label="Top Rated" isSidebar={true} onClick={closeSidebar} />
+                    <NavLink to="/premium" iconClass="fa-regular fa-crown" label="Premium" isSidebar={true} onClick={closeSidebar} />
                   </ul>
                 </div>
               </div>
-            )}
 
+              {isTablet && isOpen && (
+                <div className="sidebar-top-menu">
+                  <div className="sidebar-list-group">
+                    <div className="sidebar-title"><h6>Streaming</h6></div>
+                    <div className="sidebar-link-list">
+                      <ul className="sidebar-links">
+                        <NavLink to="/movies" iconClass="fa-regular fa-clapperboard-play" label="Movies" isSidebar={true} onClick={closeSidebar} />
+                        <NavLink to="/series" iconClass="fa-regular fa-popcorn" label="Series" isSidebar={true} onClick={closeSidebar} />
+                        <NavLink to="/tvshows" iconClass="fa-regular fa-tv" label="Tv Shows" isSidebar={true} onClick={closeSidebar} />
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <div className="sidebar-list-group">
+                <div className="sidebar-title"><h6>Library</h6></div>
+                <div className="sidebar-link-list">
+                  <ul className="sidebar-links">
+                    <NavLink to="/mybackpack" iconClass="fa-light fa-backpack" label="My Backpack" isSidebar={true} onClick={closeSidebar} />
+                  </ul>
+                </div>
+              </div>
+
+              {isTablet && isOpen && (
+                <div className={`sidebar-list-group sidebar-subscribe ${isSubscribed ? 'd-none' : ''}`}>
+                  <div className="sidebar-title"><h6>Subscribe</h6></div>
+                  <div className="sidebar-link-list">
+                    <ul className="sidebar-links subscribe-link">
+                      <NavLink to="/subscribe" iconClass="fa-regular fa-badge-dollar" label="Subscribe" isSidebar={true} onClick={closeSidebar} />
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </div>
             <div className="sidebar-watermark">
               <div className="watermark-divider">
-                <p>Developed by <a href="#">Vasu Bhalodiya</a></p>
+                <p>Developed by <a href="https://www.linkedin.com/in/vasubhalodiya/">Vasu Bhalodiya</a></p>
               </div>
             </div>
           </div>
