@@ -82,6 +82,7 @@
     .play-btn .btn-play{width: 55px; height: 55px; font-size: 17px;}
     .trailer iframe{height: 400px;}
     .backpack-movies-section{grid-template-columns: repeat(4, 1fr);}
+    .most-popular-tag{top: -8px;}
     
 
     
@@ -137,6 +138,7 @@
     .skeleton-img{height: 300px;}
     .skeleton-card:nth-child(2){display: none;}
     .skeleton-card{width: 100%;}
+    .most-popular-tag{top: -8px;}
 
 }
 

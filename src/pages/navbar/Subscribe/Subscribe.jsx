@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Subscribe.css';
 import { Link } from 'react-router-dom';
 import images from '../../../utils/Images';
@@ -6,11 +6,14 @@ import SubscribeCard from '@/components/SubscribeCard/SubscribeCard';
 import { useNavigate } from 'react-router-dom';
 import { doc, updateDoc, serverTimestamp, Timestamp } from "firebase/firestore";
 import { auth, db } from "../../../Auth/firebase";
+import { toast } from 'react-toastify';
+
 
 const BASE_URL = "https://cinefix.onrender.com";
 
 const Subscribe = () => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     document.body.classList.add('reset-css');
@@ -21,6 +24,9 @@ const Subscribe = () => {
 
   const handlePayment = async (amount) => {
     try {
+
+      setIsLoading(true);
+
       // const res = await fetch("http://localhost:5000/create-order", {
       //   method: "POST",
       //   headers: { "Content-Type": "application/json" },
@@ -83,11 +89,17 @@ const Subscribe = () => {
         theme: { color: "#e43a3a" },
       };
 
+      toast.dismiss("razorpay-load");
+      setIsLoading(false);
+
       const razor = new window.Razorpay(options);
       razor.open();
 
     } catch (error) {
       console.error("Error in payment flow:", error);
+      toast.dismiss("razorpay-load");
+      setIsLoading(false);
+      toast.error("Something went wrong");
     }
   };
 
@@ -96,6 +108,7 @@ const Subscribe = () => {
       type: 'Free Trial',
       price: '0',
       isActive: false,
+      isMostPopular: false,
       amountInINR: 0,
       features: [
         { text: 'Streaming in high quality', available: true },
@@ -109,6 +122,7 @@ const Subscribe = () => {
       type: 'Monthly Subscription',
       price: '189',
       isActive: true,
+      isMostPopular: true,
       amountInINR: 189,
       features: [
         { text: 'Streaming in high quality', available: true },
@@ -122,6 +136,7 @@ const Subscribe = () => {
       type: 'Yearly Subscription',
       price: '2189',
       isActive: false,
+      isMostPopular: false,
       amountInINR: 2189,
       features: [
         { text: 'Streaming in high quality', available: true },
@@ -134,31 +149,40 @@ const Subscribe = () => {
   ];
 
   return (
-    <div className="subscribe reset-css">
-      <div className="subscribe-container">
-        <div className="subscribe-heading">
-          <Link to="/">
-            <img src={images.logo} alt="cinefix-logo" className='logo' />
-          </Link>
+    <>
+      {isLoading && (
+        <div className="payment-loader">
+          <div className="loader"></div>
+          <h2 className='loader-txt'>Your payment is getting ready...</h2>
         </div>
-        <div className="subscribe-card-head">
-          <p className='subscribe-access-premium'>Access Premium</p>
-          <h2 className='subscribe-big-txt'>It's easy to get started</h2>
-          <h2 className='subscribe-small-txt'>Choose the best plan to enjoy the best movies and series</h2>
-        </div>
-        <div className="subscribe-section">
-          {plans.map((plan, index) => (
-            <SubscribeCard
-              key={index}
-              type={plan.type}
-              price={plan.price}
-              features={plan.features}
-              isActive={plan.isActive}
-              onSubscribe={() => handlePayment(plan.amountInINR)} />
-          ))}
+      )}
+      <div className="subscribe reset-css">
+        <div className="subscribe-container">
+          <div className="subscribe-heading">
+            <Link to="/">
+              <img src={images.logo} alt="cinefix-logo" className='logo' />
+            </Link>
+          </div>
+          <div className="subscribe-card-head">
+            <p className='subscribe-access-premium'>Access Premium</p>
+            <h2 className='subscribe-big-txt'>It's easy to get started</h2>
+            <h2 className='subscribe-small-txt'>Choose the best plan to enjoy the best movies and series</h2>
+          </div>
+          <div className="subscribe-section">
+            {plans.map((plan, index) => (
+              <SubscribeCard
+                key={index}
+                type={plan.type}
+                price={plan.price}
+                features={plan.features}
+                isActive={plan.isActive}
+                isMostPopular={plan.isMostPopular}
+                onSubscribe={() => handlePayment(plan.amountInINR)} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

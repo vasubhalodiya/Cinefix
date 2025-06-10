@@ -6,6 +6,7 @@
     border: 1px solid var(--border-color);
     border-radius: 20px;
     padding: 40px 30px;
+    position: relative;
 }
 
 .subscribe-card-type
@@ -108,10 +109,50 @@ button.btn-filled {
     background-color: transparent;
     border: 1px solid var(--light-color);
 }
+.most-popular-tag {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: linear-gradient(135deg, #ff3f82, #ae24fe, #802af8);
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Int-Medium';
+    padding: 6px 10px;
+    border-radius: 999px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    transform: rotate(10deg);
+    z-index: 10;
+    overflow: hidden;
+    letter-spacing: 0.2px;
+}
 
+.most-popular-tag::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 75%
+  );
+  border-radius: 999px;
+  animation: shimmer 2s linear infinite;
+  pointer-events: none;
+}
 
-  
-
+/* Use transform instead of left % for better GPU animation */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
 
 
 

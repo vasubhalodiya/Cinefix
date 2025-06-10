@@ -2,9 +2,15 @@ import React from 'react';
 import Button from '../Button/Button';
 import './SubscribeCard.css';
 
-const SubscribeCard = ({ type, price, features, isActive, onSubscribe }) => {
+const SubscribeCard = ({ type, price, features, isActive, isMostPopular, onSubscribe }) => {
   return (
     <div className={`subscribe-card ${isActive ? 'active' : ''}`}>
+      {isMostPopular && (
+        <div className="most-popular-tag">
+          <span>Most Popular</span>
+        </div>
+      )}
+      
       <div className="subscribe-card-cnt">
         <div className={`subscribe-card-type ${isActive ? 'active' : ''}`}>
           <p className="subscribe-card-type-mode">{type}</p>
@@ -33,7 +39,6 @@ const SubscribeCard = ({ type, price, features, isActive, onSubscribe }) => {
             onClick={() => onSubscribe()}>
             {isActive ? 'Buy Now' : 'Get Started'}
           </Button>
-
         </div>
       </div>
     </div>
