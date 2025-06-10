@@ -126,6 +126,11 @@ const Sidebar = () => {
               </div>
             )}
 
+            <div className="sidebar-watermark">
+              <div className="watermark-divider">
+                <p>Developed by <a href="#">Vasu Bhalodiya</a></p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

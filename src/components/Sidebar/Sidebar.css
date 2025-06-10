@@ -198,12 +198,31 @@
 .sidebar.open .navbar-profile-section .sidebar-subscribe-btn {
   display: none;
 }
+
 .sidebar.open .sidebar-links {
   display: block;
 }
 
+.sidebar-watermark p
+{
+  color: #5e5e5e;
+  border-top: 1px solid #2d2d2d;
+  padding-top: 10px;
+  font-size: 13px;
+  text-align: center;
+}
 
+.watermark-divider{
+  padding: 20px;
+  padding-top: 0;
+}
 
+.sidebar-watermark p a
+{
+  color: #7cb3fa;
+  font-family: 'Int-Regular';
+  font-size: 12px;
+}
 
 
 

@@ -8,7 +8,6 @@ import { doc, updateDoc, serverTimestamp, Timestamp } from "firebase/firestore";
 import { auth, db } from "../../../Auth/firebase";
 import { toast } from 'react-toastify';
 
-
 const BASE_URL = "https://cinefix.onrender.com";
 
 const Subscribe = () => {
@@ -22,16 +21,100 @@ const Subscribe = () => {
     };
   }, []);
 
-  const handlePayment = async (amount) => {
-    try {
+  // const handlePayment = async (amount) => {
+  //   try {
 
+  //     setIsLoading(true);
+
+  //     // const res = await fetch("http://localhost:5000/create-order", {
+  //     //   method: "POST",
+  //     //   headers: { "Content-Type": "application/json" },
+  //     //   body: JSON.stringify({ amount }),
+  //     // });
+  //     const res = await fetch(`${BASE_URL}/create-order`, {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify({ amount }),
+  //     });
+
+  //     const data = await res.json();
+  //     if (!res.ok) throw new Error(data.message || "Failed to create order");
+
+  //     const currentUser = auth.currentUser;
+  //     if (!currentUser) {
+  //       alert("Please login first");
+  //       return;
+  //     }
+
+  //     const options = {
+  //       key: "rzp_test_f72l5fnGjUGpvZ",
+  //       amount: data.amount,
+  //       currency: "INR",
+  //       name: "Cinefix",
+  //       description: "Subscription Payment",
+  //       order_id: data.id,
+  //       handler: async function (response) {
+  //         console.log("Payment successful!", response);
+
+  //         let expiryDate = new Date();
+  //         if (amount === 189) {
+  //           expiryDate.setDate(expiryDate.getDate() + 1);
+  //         } else if (amount === 2189) {
+  //           expiryDate.setDate(expiryDate.getDate() + 3);
+  //         }
+  //         const expiryTimestamp = Timestamp.fromDate(expiryDate);  //fromDate firestore compatible timestamp ma convert kare chhe
+
+  //         await updateDoc(doc(db, "users", currentUser.uid), {
+  //           subscriptionStatus: "active",
+  //           subscriptionExpiry: expiryTimestamp,
+  //           lastSubscriptionUpdate: serverTimestamp(),
+  //         });
+
+  //         const redirectPath = localStorage.getItem("redirectAfterPayment");
+
+  //         if (redirectPath) {
+  //           localStorage.removeItem("redirectAfterPayment");
+  //           navigate(redirectPath);
+  //         } else {
+  //           navigate("/premium");
+  //         }
+  //       },
+
+  //       prefill: {
+  //         name: currentUser.displayName || "User",
+  //         email: currentUser.email || "",
+  //         contact: "1234567890",
+  //       },
+  //       theme: { color: "#e43a3a" },
+  //     };
+
+  //     toast.dismiss("razorpay-load");
+  //     setIsLoading(false);
+
+  //     const razor = new window.Razorpay(options);
+  //     razor.open();
+
+  //   } catch (error) {
+  //     console.error("Error in payment flow:", error);
+  //     toast.dismiss("razorpay-load");
+  //     setIsLoading(false);
+  //     toast.error("Something went wrong");
+  //   }
+  // };
+
+  const handlePayment = async (amount) => {
+    const currentUser = auth.currentUser;
+
+    if (!currentUser) {
+      toast.warn("Please login to subscribe.");
+      localStorage.setItem("redirectAfterPayment", window.location.pathname);
+      navigate("/login");
+      return;
+    }
+
+    try {
       setIsLoading(true);
 
-      // const res = await fetch("http://localhost:5000/create-order", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify({ amount }),
-      // });
       const res = await fetch(`${BASE_URL}/create-order`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -40,12 +123,6 @@ const Subscribe = () => {
 
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || "Failed to create order");
-
-      const currentUser = auth.currentUser;
-      if (!currentUser) {
-        alert("Please login first");
-        return;
-      }
 
       const options = {
         key: "rzp_test_f72l5fnGjUGpvZ",
@@ -63,7 +140,7 @@ const Subscribe = () => {
           } else if (amount === 2189) {
             expiryDate.setDate(expiryDate.getDate() + 3);
           }
-          const expiryTimestamp = Timestamp.fromDate(expiryDate);  //fromDate firestore compatible timestamp ma convert kare chhe
+          const expiryTimestamp = Timestamp.fromDate(expiryDate);
 
           await updateDoc(doc(db, "users", currentUser.uid), {
             subscriptionStatus: "active",
@@ -72,7 +149,6 @@ const Subscribe = () => {
           });
 
           const redirectPath = localStorage.getItem("redirectAfterPayment");
-
           if (redirectPath) {
             localStorage.removeItem("redirectAfterPayment");
             navigate(redirectPath);
@@ -80,7 +156,6 @@ const Subscribe = () => {
             navigate("/premium");
           }
         },
-
         prefill: {
           name: currentUser.displayName || "User",
           email: currentUser.email || "",
@@ -91,7 +166,6 @@ const Subscribe = () => {
 
       toast.dismiss("razorpay-load");
       setIsLoading(false);
-
       const razor = new window.Razorpay(options);
       razor.open();
 
@@ -102,6 +176,7 @@ const Subscribe = () => {
       toast.error("Something went wrong");
     }
   };
+
 
   const plans = [
     {
@@ -177,7 +252,13 @@ const Subscribe = () => {
                 features={plan.features}
                 isActive={plan.isActive}
                 isMostPopular={plan.isMostPopular}
-                onSubscribe={() => handlePayment(plan.amountInINR)} />
+                onSubscribe={() => {
+                  if (plan.amountInINR === 0) {
+                    navigate("/");
+                  } else {
+                    handlePayment(plan.amountInINR);
+                  }
+                }} />
             ))}
           </div>
         </div>

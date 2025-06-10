@@ -7,6 +7,7 @@ import { useAuth } from '../../Auth/AuthContext';
 import { doc, getDoc } from "firebase/firestore";
 import { auth, db } from "../../Auth/firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import { toast } from 'react-toastify';
 
 const Navbar = ({ isTablet, onToggle, isOpen, closeSidebar, showSubscribe }) => {
   const { user } = useAuth();
@@ -41,6 +42,7 @@ const Navbar = ({ isTablet, onToggle, isOpen, closeSidebar, showSubscribe }) => 
     e.preventDefault();
 
     if (!user) {
+      toast.warn("Please login to subscribe.");
       navigate("/login");
     } else {
       navigate("/subscribe");
