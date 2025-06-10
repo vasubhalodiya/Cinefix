@@ -35,10 +35,6 @@ const SearchPage = () => {
     return genre ? genre.name : 'Unknown';
   };
 
-  const handleSearchClick = () => {
-    
-  };
-
   const handleMovieClick = (movieId) => {
     navigate(`/movie/${movieId}`);
   };
@@ -52,7 +48,8 @@ const SearchPage = () => {
 
   return (
     <div className="search-page">
-      <div className="search-bar">
+      <div className="search-bar relative w-full max-w-md">
+        <span className="search-icon"> <i class="fa-regular fa-magnifying-glass active-icon"></i> </span>
         <input
           type="text"
           value={query}
@@ -60,9 +57,6 @@ const SearchPage = () => {
           placeholder="Search for something epic"
           className="search-input"
         />
-        <Button onClick={handleSearchClick} className="search-button">
-          Search
-        </Button>
       </div>
 
       <div className="moviecard-container">

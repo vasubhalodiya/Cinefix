@@ -170,7 +170,8 @@
 {
     .main-cnt{padding: 20px 15px;}
     .navbar-cnt{padding: 0px 15px;}
-    .navbar-profile-section, .navbar-mobile-header{gap: 20px;}
+    .navbar-mobile-header{gap: 20px;}
+    .navbar-profile-section{gap: 15px;}
     .profile-dropdown i{display: none;}
     .popular-movies-card{width: 75%;}
     .movies-list{grid-template-columns: repeat(1, 1fr);}
