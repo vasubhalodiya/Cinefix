@@ -10,18 +10,15 @@
 } */
 
 .sidebar-logo {
-  /* height: 65px;
+  height: 65px;
   display: flex;
   align-items: center;
-  justify-content: center; */
-    height: 65px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translate(-50%, 0%);
-    position: absolute;
-    top: 0;
-    left: 50%;
+  justify-content: center;
+/* ====================================== */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
 .logo {
