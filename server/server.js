@@ -71,7 +71,21 @@ app.post('/create-order', async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('Hello from Cinefix server');
+  // res.send('Hello from Cinefix server');
+  res.send(`<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cinefix Server</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+            body { background-color: #121212; color: #ffffff; font-family: 'Inter', Arial, sans-serif; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; margin: 0; padding: 0; }
+            h2{ font-size: 20px; font-weight: 500; letter-spacing: 1px; margin-bottom: 200px; }
+        </style>
+    </head><body>
+        <h2>Hello From <span style="color:#1188ff;">Cinefix</span> Server 🚀</h2>
+    </body></html>`);
 });
 
 app.listen(port, () => {
