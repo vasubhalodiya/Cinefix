@@ -30,6 +30,11 @@
   height: 100%;
 }
 
+.sidebar-cntvaults::-webkit-scrollbar
+{
+    display: none;
+}
+
 .sidebar-list-group {
   margin-bottom: 20px;
 }
@@ -173,7 +178,7 @@
 
 .sidebar.open {
   transform: translateX(0);
-  overflow-y: scroll;
+  overflow-y: unset;
 }
 
 .sidebar.open .sidebar-logo .logo,
